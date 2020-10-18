@@ -1,0 +1,84 @@
+Sub capa()
+    Sheets("Menu").Select
+    Range("A1").Select
+End Sub
+
+Sub apontamento()
+    Sheets("Apontamento").Select
+    Range("A1").Select
+End Sub
+
+Sub lista_apontamento()
+    Sheets("Lista ").Select
+    Range("A1").Select
+End Sub
+
+Sub aida_janeiro()
+    Sheets("Aida").Select
+    Range("A1").Select
+End Sub
+
+Sub finger1500_janeiro()
+    Sheets("Finger1500").Select
+    Range("A1").Select
+End Sub
+
+Sub finger2000_janeiro()
+    Sheets("Finger2000").Select
+    Range("A1").Select
+End Sub
+
+Sub trf1500_janeiro()
+    Sheets("TRF1500").Select
+    Range("A1").Select
+End Sub
+
+Sub trf2000_janeiro()
+    Sheets("TRF2000").Select
+    Range("A1").Select
+End Sub
+
+Sub g1_janeiro()
+    Sheets("G1").Select
+    Range("A1").Select
+End Sub
+
+Sub g2_janeiro()
+    Sheets("G2").Select
+    Range("A1").Select
+End Sub
+
+Sub rollforming_janeiro()
+    Sheets("ROLLFORMING").Select
+    Range("A1").Select
+End Sub
+
+Sub TempoMedParadaDiariaAidaG1G2()
+    Sheets("TempoMedParadaDiariaAidaG1G2").Select
+    Range("A1").Select
+End Sub
+
+Sub TempoMedParadaDiariaF15002000()
+    Sheets("TempoMedParadaDiariaF15002000").Select
+    Range("A1").Select
+End Sub
+
+Sub TempoMedParadaDiariaT15002000()
+    Sheets("TempoMedParadaDiariaT15002000").Select
+    Range("A1").Select
+End Sub
+
+Sub TempoMedParadaDiariaROLLFORMING()
+    Sheets("TempoMedParadaDiariaROLLFORMING").Select
+    Range("A1").Select
+End Sub
+
+Sub MedMensalProblemas()
+    Sheets("MedMensalProblemas").Select
+    Range("A1").Select
+End Sub
+
+Sub Ultimas10ProduçõesMensal()
+    Sheets("Ultimas10ProduçõesMensal").Select
+    Range("A1").Select
+End Sub

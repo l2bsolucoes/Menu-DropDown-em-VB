@@ -1,0 +1,171 @@
+Sub Menu()
+
+Application.CommandBars("Cell").Reset
+  
+        Dim cbc As CommandBarControl
+  
+        'Oculta todos os comandos do botão direito
+        For Each cbc In Application.CommandBars("cell").Controls
+                cbc.Visible = False
+        Next cbc
+        
+        'INICIO----------
+        'Adiciona um menu
+        Set NewControlDelete = Application.CommandBars("cell").Controls.Add
+        
+        With NewControlDelete
+            .Caption = "&Início"
+            .OnAction = "capa"
+            .BeginGroup = True
+            '.FaceId = 568
+        End With
+        
+        'APONTAMENTO-----
+        'Adiciona um menu
+        Set NewControlDelete = Application.CommandBars("cell").Controls.Add
+        
+        With NewControlDelete
+            .Caption = "&Apontamento"
+            .OnAction = "apontamento"
+            .BeginGroup = True
+            '.FaceId = 568
+        End With
+        
+        'Adiciona um menu
+        Set NewControlDelete = Application.CommandBars("cell").Controls.Add
+        
+        With NewControlDelete
+            .Caption = "&Lista"
+            .OnAction = "lista_apontamento"
+            .BeginGroup = True
+            '.FaceId = 568
+        End With
+        
+        '->LINHAS---
+        'cria menu
+        Application.CommandBars("Cell").Controls.Add(Type:=msoControlPopup).Caption = "Linhas"
+                With Application.CommandBars("Cell").Controls("&Linhas")
+        .BeginGroup = True
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "Aida"
+                .OnAction = "aida_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "Finger 1500"
+                .OnAction = "finger1500_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "Finger 2000"
+                .OnAction = "finger2000_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "TRF 1500"
+                .OnAction = "trf1500_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "TRF 2000"
+                .OnAction = "trf2000_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "G1"
+                .OnAction = "g1_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "G2"
+                .OnAction = "g2_janeiro"
+            End With
+            
+            'Adiciona um sub menu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 217
+                .Caption = "ROLLFORMING"
+                .OnAction = "rollforming_janeiro"
+            End With
+        End With
+        
+        '->TEMPO MEDIO DE PARADA DIARIA----------------------
+         'cria menu
+         Application.CommandBars("Cell").Controls.Add(Type:=msoControlPopup).Caption = "Tempo Médio de Parada Diária"
+                With Application.CommandBars("Cell").Controls("&Tempo Médio de Parada Diária")
+         .BeginGroup = True
+            
+            'cria submenu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 59
+                .Caption = "Aida / G1 / G2"
+                .OnAction = "TempoMedParadaDiariaAidaG1G2"
+            End With
+            
+            'cria submenu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 59
+                .Caption = "Finger 1500 / 2000"
+                .OnAction = "TempoMedParadaDiariaF15002000"
+            End With
+            
+            'cria submenu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 59
+                .Caption = "TRF 1500 / 2000"
+                .OnAction = "TempoMedParadaDiariaT15002000"
+            End With
+            
+            'cria submenu
+            With .CommandBar.Controls.Add(Type:=msoControlButton)
+                '.FaceId = 59
+                .Caption = "ROLLFORMING"
+                .OnAction = "TempoMedParadaDiariaROLLFORMING"
+            End With
+        End With
+        
+        'MEDIA MENSAL POR PROBLEMAS------------------------
+        'Adiciona um menu
+        Set NewControlDelete = Application.CommandBars("cell").Controls.Add
+        
+        With NewControlDelete
+            .Caption = "&Média Mensal por Problemas"
+            .OnAction = "MedMensalProblemas"
+            .BeginGroup = True
+            '.FaceId = 568
+        End With
+        
+        'ULTIMAS 10 PRODUÇÕES DO MES------------------------
+        'Adiciona um menu
+        Set NewControlDelete = Application.CommandBars("cell").Controls.Add
+        
+        With NewControlDelete
+            .Caption = "&Registro Últimas 10 Produções"
+            .OnAction = "Ultimas10ProduçõesMensal"
+            .BeginGroup = True
+            '.FaceId = 568
+        End With
+   
+       Application.CommandBars("Cell").ShowPopup
+       
+       Application.CommandBars("Cell").Reset
+               For Each cbc In Application.CommandBars("cell").Controls
+                cbc.Visible = True
+        Next cbc
+
+End Sub
